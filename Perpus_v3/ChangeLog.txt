@@ -1,0 +1,12 @@
+Perpus_v1
+~ Fix login
+~ Fix beranda
+
+Perpus_v2
+~ Tampil data buku
+
+Perpus_v3
+~ Tampil Data Transaksi
+	- Transaksi Peminjaman
+	- Transaksi Pengembalian
+~ Tampil Laporan Transaksi
