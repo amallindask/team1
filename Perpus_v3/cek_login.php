@@ -7,7 +7,7 @@ include "koneksi.php";
 if (isset($_POST['submit'])) {
 	$user	= isset($_POST['user']) ? $_POST['user'] : "";
 	$pass	= isset($_POST['pass']) ? $_POST['pass'] : "";
-	$qry	= mysqli_query($db, "SELECT * FROM admin WHERE username = '$user' AND password = '$pass'");
+	$qry	= mysqli_query($db, "SELECT * FROM tbadmin WHERE username = '$user' AND password = '$pass'");
 	$sesi	= mysqli_num_rows($qry);
 
 	if ($sesi == 1) {
