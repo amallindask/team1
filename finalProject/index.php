@@ -12,7 +12,7 @@
             <th>Nama</th>
             <th>Jenis Kelamin</th>
             <th>Tanggal Lahir</th>
-            <th>Alamat></th>
+            <th>Alamat</th>
             <th colspan="2">Pilihan</th>
         </tr>
 
