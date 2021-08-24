@@ -1,22 +1,20 @@
 <?php
 include "koneksi.php";
 
-$no_sertifikat = $_POST['no_sertifikat'];
+$nopes = $_POST['nopes'];
 $nama = $_POST['nama'];
-$jenis_kelamin = $_POST['jenis_kelamin'];
-$tgl_sertifikat = $_POST['tgl_sertifikat'];
+$jenis_kel = $_POST['jenis_kel'];
+$tgl_lahir = $_POST['tgl_lahir'];
 $alamat = $_POST['alamat'];
-$peran = $_POST['peran'];
-$tema = $_POST['tema'];
+$tgl_kegiatan = $_POST['tgl_kegiatan'];
 
-$sql = $pdo->prepare("INSERT INTO peserta(no_sertifikat, nama, jenis_kelamin, tgl_sertifikat, alamat, peran, tema) VALUES(:no_sertifikat,:nama,:jenis_kelamin,:tgl_sertifikat,:alamat,:peran,:tema)");
-$sql->bindParam(':no_sertifikat', $no_sertifikat);
+$sql = $pdo->prepare("INSERT INTO peserta(nopes, nama, jenis_kel, tgl_lahir, alamat, tgl_kegiatan) VALUES(:nopes,:nama,:jk,:tgl,:alamat,:tglk)");
+$sql->bindParam(':nopes', $nopes);
 $sql->bindParam(':nama', $nama);
-$sql->bindParam(':jenis_kelamin', $jenis_kelamin);
-$sql->bindParam(':tgl_sertifikat', $tgl_sertifikat);
+$sql->bindParam(':jk', $jenis_kel);
+$sql->bindParam(':tgl', $tgl_lahir);
 $sql->bindParam(':alamat', $alamat);
-$sql->bindParam(':peran', $peran);
-$sql->bindParam(':tema', $tema);
+$sql->bindParam(':tglk', $tgl_kegiatan);
 $sql->execute(); 
 if($sql){ 
   header("location: index.php"); 

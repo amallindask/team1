@@ -1,17 +1,15 @@
 <html>
 <head>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="tampilan-simpan.css">
     <title>Pemberian Sertifikat | CRUD</title>
 </head>
 
 <body>
-    <h1 id="header">Tambah Data Sertifikat</h1>
+    <h1>Tambah Peserta</h1>
     <form method="post" action="proses_simpan.php">
-        <table>
+        <table cellpadding="8">
             <tr>
-                <td>No Sertifikat</td>
-                <td><input type="text" name="no_sertifikat"></td>
+                <td>No Peserta</td>
+                <td><input type="text" name="nopes"></td>
             </tr>
             <tr>
                 <td>Nama</td>
@@ -20,34 +18,27 @@
             <tr>
                 <td>Jenis Kelamin</td>
                 <td>
-                    <input type="radio" name="jenis_kelamin" value="Laki-laki"> Laki-laki
-                    <input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan
+                    <input type="radio" name="jenis_kel" value="Laki-laki"> Laki-laki
+                    <input type="radio" name="jenis_kel" value="Perempuan"> Perempuan
                 </td>
             </tr>
             <tr>
-                <td>Tanggal Sertifikat</td>
-                <td><input type="date" name="tgl_sertifikat"></td>
+                <td>Tanggal Lahir</td>
+                <td><input type="date" name="tgl_lahir"></td>
             </tr>
             <tr>
                 <td>Alamat</td>
-                <td><textarea name="alamat" rows="5"></textarea></td>
+                <td><textarea name="alamat"></textarea></td>
             </tr>
             <tr>
-                <td>Peran</td>
-                <td>
-                    <input type="radio" name="peran" value="Narasumber"> Narasumber
-                    <input type="radio" name="peran" value="Peserta"> Peserta
-                </td>
-            </tr>
-            <tr>
-                <td>Tema</td>
-                <td><textarea name="tema" rows="5"></textarea></td>
+                <td>Tanggal Kegiatan</td>
+                <td><input type="date" name="tgl_kegiatan"></td>
             </tr>
         </table>
         
         <hr>
-        <input type="submit" class="simpan" value="Simpan">
-        <a href="index.php"><input type="button" class="batal" value="Batal"></a>
+        <input type="submit" value="Simpan">
+        <a href="index.php"><input type="button" value="Batal"></a>
     </form>
 </body>
 </html>

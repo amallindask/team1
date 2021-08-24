@@ -1,47 +1,38 @@
 <html>
 <head>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="tampilan.css">
     <title>Pemberian Sertifikat | CRUD</title>
 </head>
 
 <body>
-    <h1 id="header">Data Peserta</h1>
-    <a class="btn" type="button" href="form_simpan.php" style="float: right;">Tambah Data</a><br><br>
-    <table>
-        <tr align="center">
-            <th>No</th>
-            <th>No Sertifikat</th>
+    <h1>Data Peserta</h1>
+    <a href="form_simpan.php">Tambah Data</a><br><br>
+    <table border="1" width="100%">
+        <tr>
+            <th>No Peserta</th>
             <th>Nama</th>
             <th>Jenis Kelamin</th>
-            <th>Tanggal Sertifikat</th>
-            <th>Alamat</th>
-            <th>Peran</th>
-            <th>Tema</th>
-            <th>Pilihan</th>
+            <th>Tanggal Lahir</th>
+            <th>Alamat></th>
+            <th>Tanggal Kegiatan</th>
+            <th colspan="2">Pilihan</th>
         </tr>
 
         <?php
         include "koneksi.php";
-        $no = 1;
+
         $sql = $pdo->prepare("SELECT * FROM peserta");
         $sql->execute(); 
         while($data = $sql->fetch()){ 
-            echo "<tr align='center'>";
-            echo "<td>".$no++."</td>";
-            echo "<td>".$data['no_sertifikat']."</td>";
+            echo "<tr>";
+            echo "<td>".$data['nopes']."</td>";
             echo "<td>".$data['nama']."</td>";
-            echo "<td>".$data['jenis_kelamin']."</td>";
-            echo "<td>".$data['tgl_sertifikat']."</td>";
+            echo "<td>".$data['jenis_kel']."</td>";
+            echo "<td>".$data['tgl_lahir']."</td>";
             echo "<td>".$data['alamat']."</td>";
-            echo "<td>".$data['peran']."</td>";
-            echo "<td>".$data['tema']."</td>";
-            echo "<td><a href='lihat.php?id=".$data['id_sertifikat']."'>Lihat</a>
-                    <a href='form_ubah.php?id=".$data['id_sertifikat']."'>Ubah</a>
-                    <a href='hapus.php?id=".$data['id_sertifikat']."'>Hapus</a>
-                    <a href='cetak.php?id=".$data['id_sertifikat']."'>Cetak</a>
-
-            </td>";
+            echo "<td>".$data['tgl_kegiatan']."</td>";
+            echo "<td><a href='form_ubah.php?id=".$data['id']."'>Ubah</a></td>";
+            echo "<td><a href='proses_hapus.php?id=".$data['id']."'>Hapus</a></td>";
+            echo "</tr>";
         } 
         ?>
     </table>

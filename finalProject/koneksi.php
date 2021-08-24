@@ -2,7 +2,7 @@
 	$host = "localhost";
 	$username = "root";
 	$password = "";
-	$database = "peserta";
+	$database = "crud"
 	
 	$pdo = new PDO ('mysql:host='.$host.';dbname='.$database, $username, $password);
 ?>
