@@ -1,12 +1,14 @@
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="tampilan-simpan.css">
     <title>Pemberian Sertifikat | CRUD</title>
 </head>
 
 <body>
-    <h1>Tambah Peserta</h1>
+    <h1 id="header">Tambah Peserta</h1>
     <form method="post" action="proses_simpan.php">
-        <table cellpadding="8">
+        <table>
             <tr>
                 <td>No Peserta</td>
                 <td><input type="text" name="nopes"></td>
@@ -28,7 +30,7 @@
             </tr>
             <tr>
                 <td>Alamat</td>
-                <td><textarea name="alamat"></textarea></td>
+                <td><textarea name="alamat" rows="3"></textarea></td>
             </tr>
             <tr>
                 <td>Tanggal Kegiatan</td>
@@ -37,8 +39,8 @@
         </table>
         
         <hr>
-        <input type="submit" value="Simpan">
-        <a href="index.php"><input type="button" value="Batal"></a>
+        <input type="submit" class="simpan" value="Simpan">
+        <a href="index.php"><input type="button" class="batal" value="Batal"></a>
     </form>
 </body>
 </html>
