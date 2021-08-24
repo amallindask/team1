@@ -1,0 +1,32 @@
+*{margin:2px; padding:0px}
+/**--Index--**/
+
+#header{
+	padding: 10px;
+	background-color: #FFE4B5;
+	text-align: center;
+	font-family: serif;
+	color: 	#800000;
+}
+
+table{
+	width: 100%;
+	border-collapse: collapse;
+	background-color: #F4A460;
+	font-family: serif;
+	color: 	#800000;
+}
+
+a{
+	font-size: 14px;
+	color: #800000;
+	background-color: #FFE4B5;
+	padding: 3px;
+}
+
+a:hover{
+	background-color: white;
+}
+/**--Akhir index--**/
+
+

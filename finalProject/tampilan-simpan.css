@@ -1,0 +1,27 @@
+body {
+	max-width: 800px;
+	margin: 0px auto;
+	font-family: serif;
+}
+
+#header{
+	background-color: #FFE4B5;
+	text-align: center;
+	color: #800000;
+	padding: 10px;
+}
+
+form{
+	background-color: #F4A460;
+	font-size: 16px;
+	padding: 10px;
+}
+
+.simpan:hover{
+	background-color: skyblue;
+}
+
+.batal:hover{
+	background-color: red;
+}
+

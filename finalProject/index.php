@@ -1,12 +1,13 @@
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="tampilan.css">
     <title>Pemberian Sertifikat | CRUD</title>
 </head>
 
 <body>
-    <h1>Data Peserta</h1>
-    <a href="form_simpan.php">Tambah Data</a><br><br>
-    <table border="1" width="100%">
+    <h1 id="header">Data Peserta</h1>
+    <a type="button" href="form_simpan.php">Tambah Data</a><br><br>
+    <table>
         <tr>
             <th>No Peserta</th>
             <th>Nama</th>
