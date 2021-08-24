@@ -11,10 +11,40 @@ body {
 	padding: 10px;
 }
 
+input[type=text], select {
+  width: 100%;
+  padding: 12px 100px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=date], select {
+  width: 50%;
+  padding: 12px 30px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea, select {
+  width: 100%;
+  padding: 12px 100px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
 form{
 	background-color: #F4A460;
 	font-size: 16px;
-	padding: 10px;
+	padding: 30px;
 }
 
 .simpan:hover{
