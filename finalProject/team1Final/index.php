@@ -17,7 +17,7 @@
     </head>
     <body style="--bs-body-color: #333;">
     <div class="container-fluid">
-        <div class="bg-warning p-2 mb-2">
+        <div class="p-5 mb-2 bg-warning shadow-sm">
             <h1 class="text-center">Data Peserta</h1>
             <div class="text-center" style="height: auto; --bs-bg-opacity: .6;">
             <?php foreach ($tema as $tm) : ?>
@@ -25,18 +25,19 @@
             <?php endforeach; ?>
             </div>
         </div>
-        <div class="container-fluid">
-            <a class="btn btn-primary btn-sm" href="form_simpan.php">Tambah Peserta</a><br><br>
+        <div class="mx-3">
+            <a class="btn btn-primary btn-sm shadow-sm" href="form_simpan.php">Tambah Peserta</a><br><br>
         </div>
-        <table class="table table-bordered table-striped table-hover text-center">
+        <div class="my-1">
+        <table class="table table-bordered table-hover table-responsive text-center">
             <thead class="bg-info">
             <tr>
                 <th>No</th>
                 <th>Id Peserta</th>
-                <th>Nama</th>
+                <th class="col-4">Nama</th>
                 <th>Tanggal Kegiatan</th>
                 <th>Peran</th>
-                <th>Aksi</th>
+                <th class="col-3">Aksi</th>
             </tr>
             </thead>
             <?php $no = 1; ?>
