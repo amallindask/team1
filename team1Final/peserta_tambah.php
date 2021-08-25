@@ -28,7 +28,7 @@
 <body style="--bs-body-color: #333;">
     <div class="container w-50">
     <h1 class="p-2 text-center bg-warning shadow-sm">Tambah Peserta</h1>
-    <form class="my-1 shadow-sm" method="post" action="proses_simpan.php">
+    <form class="my-1 shadow-sm" action="" method="POST">
         <table class="table fw-bold bg-info">
             <tr>
                 <td>Nama</td>
@@ -63,7 +63,7 @@
         </table>
         
         <hr>
-        <input type="submit" class="button bg-info rounded shadow-sm" value="Simpan">
+        <input type="submit" class="button bg-info rounded shadow-sm" value="Simpan" name="simpan">
         <a href="index.php"><input type="button" class="button rounded shadow-sm" value="Batal"></a>
     </form>
 </body>
