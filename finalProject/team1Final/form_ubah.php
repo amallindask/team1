@@ -4,8 +4,7 @@
     <title>Pemberian Sertifikat | CRUD</title>
 </head>
 
-<body>
-    
+<body>    
     <h1 id="header">Ubah Data Sertifikat</h1>
     <form method="post" action="proses_simpan.php">
         <table>
