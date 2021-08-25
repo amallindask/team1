@@ -1,3 +1,23 @@
+<?php 
+    // Menghubungkan ke database
+        require 'koneksi.php';
+
+    // Menambah peserta
+      if( isset($_POST["simpan"]) ) {
+        if (peserta_tambah($_POST) > 0) {
+            echo "<script>
+                    alert('BERHASIL');
+                    document.location.href = 'index.php';
+                 </script>";
+        } else{
+            echo "<script>
+                    alert('GAGAL');
+                    document.location.href = 'peserta_tambah.php';
+                 </script>";
+          }
+      }
+?>
+
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

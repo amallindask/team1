@@ -16,11 +16,11 @@
         require 'koneksi.php';
 
     // Mengambil data dari database peserta
-        $peserta = mysqli_query($conn, "SELECT * FROM peserta");
-        $tema    = mysqli_query($conn, "SELECT * FROM tema");
+        $peserta = query("SELECT * FROM peserta");
+        $tema    = query("SELECT * FROM tema");
 
     ?>
-    <div class="container-fluid">
+    <div class="container">
         <div class="p-5 mb-5 bg-success p-2 text-white bg-opacity-75 shadow-sm">
             <h1 class="text-center" style="color: white;">Data Pemberian Sertifikat</h1>
             <div class="text-center" style="height: auto; --bs-bg-opacity: .6;">
@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="header">
-            <a class="btn btn-primary btn-sm shadow-sm" style="float: right;" href="form_simpan.php">Tambah Data</a><br><br>
+            <a class="btn btn-primary btn-sm shadow-sm" style="float: right;" href="peserta_tambah.php">Tambah Data</a><br><br>
         </div>
         <table class="table table-bordered table-hover table-responsive text-center">
             <thead class="bg-success p-2 text-white bg-opacity-50">
@@ -53,9 +53,9 @@
                 <td style="width: 10%;"><?= $pst["tgl_kegiatan"] ?></td>
                 <td><?= $pst["peran"]; ?></td>
                 <td>
-                    <a class="btn btn-primary btn-sm" style="font-size: 10px;" href="lihat.php?id=<?= $pst['id_peserta']; ?>">Lihat</a>
-                    <a class="btn btn-warning btn-sm" style="font-size: 10px;" href="ubah.php?id=<?= $pst['id_peserta']; ?>">Ubah</a>
-                     <a class="btn btn-danger btn-sm" style="font-size: 10px;" href="hapus.php?id=<?= $pst['id_peserta']; ?>" onclick="return confirm('Anda yakin akan menghapus peserta ini?');">Hapus</a>
+                    <a class="btn btn-primary btn-sm" style="font-size: 10px;" href="peserta_lihat.php?id=<?= $pst['id_peserta']; ?>">Lihat</a>
+                    <a class="btn btn-warning btn-sm" style="font-size: 10px;" href="peserta_ubah.php?id=<?= $pst['id_peserta']; ?>">Ubah</a>
+                     <a class="btn btn-danger btn-sm" style="font-size: 10px;" href="peserta_hapus.php?id=<?= $pst['id_peserta']; ?>" onclick="return confirm('Anda yakin akan menghapus peserta ini?');">Hapus</a>
                     <a class="btn btn-success btn-sm" style="font-size: 10px;" href="cetak/cetak_sertifikat.php?id=<?= $pst['id_peserta']; ?>" target="_blank">Cetak Sertifikat</a>
                 </td>
             </tr>
