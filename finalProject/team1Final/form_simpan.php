@@ -1,23 +1,24 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/tampilan-simpan.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <title>Pemberian Sertifikat | CRUD</title>
 </head>
 
-<body>
-    <h1 id="header">Tambah Peserta</h1>
-    <form method="post" action="proses_simpan.php">
-        <table>
+<body style="--bs-body-color: #333;">
+    <div class="container w-50">
+    <h1 class="p-2 text-center bg-warning shadow-sm">Tambah Peserta</h1>
+    <form class="my-1 shadow-sm" method="post" action="proses_simpan.php">
+        <table class="table h6 bg-info">
             <tr>
                 <td>Nama</td>
-                <td><input type="text" name="nama" required></td>
+                <td><input class="form-control" type="text" name="nama" required></td>
             </tr>
             <tr>
                 <td>Jenis Kelamin</td>
                 <td>
-                    <input type="radio" name="gender" value="Laki-laki" required><label>Laki-Laki</label>
-                    <input type="radio" name="gender" value="Perempuan" required><label>Perempuan</label>
+                    <input type="radio" class="form-check-input" name="gender" value="Laki-laki" required><label>Laki-Laki</label>
+                    <input type="radio" class="form-check-input" name="gender" value="Perempuan" required><label>Perempuan</label>
                 </td>
             </tr>
             <tr>
@@ -26,13 +27,13 @@
             </tr>
             <tr>
                 <td>Alamat</td>
-                <td><textarea name="alamat" rows="3" required></textarea></td>
+                <td><textarea class="form-control" name="alamat" rows="3" required></textarea></td>
             </tr>
             <tr>
                 <td>Peran</td>
                 <td>
-                    <input type="radio" name="peran" value="Pemateri" required><label>Pemateri</label>
-                    <input type="radio" name="peran" value="Peserta" required><label>Peserta</label>
+                    <input type="radio" class="form-check-input" name="peran" value="Pemateri" required><label>Pemateri</label>
+                    <input type="radio" class="form-check-input" name="peran" value="Peserta" required><label>Peserta</label>
                 </td>
             </tr>
             <tr>
@@ -42,8 +43,8 @@
         </table>
         
         <hr>
-        <input type="submit" class="simpan" value="Simpan">
-        <a href="index.php"><input type="button" class="batal" value="Batal"></a>
+        <input type="submit" class="button bg-info rounded shadow-sm" value="Simpan">
+        <a href="index.php"><input type="button" class="button rounded shadow-sm" value="Batal"></a>
     </form>
 </body>
 </html>
