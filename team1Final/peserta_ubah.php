@@ -32,7 +32,7 @@
         <?php foreach ($peserta as $pst) : ?>
         <table>
             <tr>
-                <td><input type="text" name="id_peserta" value="<?= $pst["id_peserta"]; ?>"></td>
+                <td><input type="hidden" name="id_peserta" value="<?= $pst["id_peserta"]; ?>"></td>
             </tr>
             <tr>
                 <td>Nama</td>
