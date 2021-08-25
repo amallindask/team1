@@ -9,7 +9,7 @@
     <div class="container w-50">
     <h1 class="p-2 text-center bg-warning shadow-sm">Tambah Peserta</h1>
     <form class="my-1 shadow-sm" method="post" action="proses_simpan.php">
-        <table class="table h6 bg-info">
+        <table class="table fw-bold bg-info">
             <tr>
                 <td>Nama</td>
                 <td><input class="form-control" type="text" name="nama" required></td>
