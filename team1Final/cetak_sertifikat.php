@@ -1,9 +1,9 @@
 <?php 
-	require_once '../dompdf/autoload.inc.php';
+	require_once 'dompdf/autoload.inc.php';
 	use Dompdf\Dompdf;
 
 
-	require '../koneksi.php';
+	require 'koneksi.php';
 
 	$id 	   = $_GET['id'];
 	$no 	   = 1;

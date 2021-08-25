@@ -45,14 +45,14 @@
             </tr>
             <tr>
             	<td>Tanggal Sertifikat</td>
-            	<td><label><?= $pst['created_at']; ?></label></td>
+            	<td><label><?= $pst['tgl_sertifikat']; ?></label></td>
             </tr>
         </table>
 <?php endforeach; ?>
 <center>
-        <a href="hapus.php?id=<?= $pst['id_peserta']; ?>" onclick="return confirm('Anda yakin akan menghapus peserta ini?');">Hapus</a>
-        <a href="#">Ubah</a>
-        <a href="#">Cetak Sertifikat</a>
+        <a class="btn btn-warning btn-sm" style="font-size: 10px;" href="peserta_ubah.php?id=<?= $pst['id_peserta']; ?>">Ubah</a>
+        <a class="btn btn-danger btn-sm" style="font-size: 10px;" href="peserta_hapus.php?id=<?= $pst['id_peserta']; ?>" onclick="return confirm('Anda yakin akan menghapus peserta ini?');">Hapus</a>
+        <a class="btn btn-success btn-sm" style="font-size: 10px;" href="cetak_sertifikat.php?id=<?= $pst['id_peserta']; ?>" target="_blank">Cetak Sertifikat</a>
 </center>
 </body>
 </html>

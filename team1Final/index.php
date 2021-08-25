@@ -56,7 +56,7 @@
                     <a class="btn btn-primary btn-sm" style="font-size: 10px;" href="peserta_lihat.php?id=<?= $pst['id_peserta']; ?>">Lihat</a>
                     <a class="btn btn-warning btn-sm" style="font-size: 10px;" href="peserta_ubah.php?id=<?= $pst['id_peserta']; ?>">Ubah</a>
                      <a class="btn btn-danger btn-sm" style="font-size: 10px;" href="peserta_hapus.php?id=<?= $pst['id_peserta']; ?>" onclick="return confirm('Anda yakin akan menghapus peserta ini?');">Hapus</a>
-                    <a class="btn btn-success btn-sm" style="font-size: 10px;" href="cetak/cetak_sertifikat.php?id=<?= $pst['id_peserta']; ?>" target="_blank">Cetak Sertifikat</a>
+                    <a class="btn btn-success btn-sm" style="font-size: 10px;" href="cetak_sertifikat.php?id=<?= $pst['id_peserta']; ?>" target="_blank">Cetak Sertifikat</a>
                 </td>
             </tr>
             </tbody>

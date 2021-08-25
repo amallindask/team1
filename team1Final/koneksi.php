@@ -28,4 +28,28 @@
  			return mysqli_affected_rows($conn);
 		}
 
+	// Mengubah peserta
+		function peserta_ubah($data) {
+			global $conn;
+
+			$id_peserta     = $_POST['id_peserta'];
+	        $nama           = $_POST['nama'];
+	        $jenis_kelamin  = $_POST['jenis_kelamin'];
+	        $tgl_kegiatan   = $_POST['tgl_kegiatan'];
+	        $alamat         = $_POST['alamat'];
+	        $peran          = $_POST['peran'];
+	        $tgl_sertifikat = $_POST['tgl_sertifikat'];
+
+	        mysqli_query($conn, "UPDATE peserta SET
+	        					nama 			= '$nama',
+	        					jenis_kelamin	= '$jenis_kelamin',
+	        					tgl_kegiatan 	= '$tgl_kegiatan',
+	        					alamat 			= '$alamat',
+	        					peran 			= '$peran',
+	        					tgl_sertifikat  = '$tgl_sertifikat'
+	        			WHERE 	id_peserta 		= $id_peserta");
+
+            return mysqli_affected_rows($conn);
+		}
+
 ?>
