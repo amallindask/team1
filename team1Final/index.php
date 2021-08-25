@@ -17,20 +17,21 @@
 
     // Mengambil data dari database peserta
         $peserta = query("SELECT * FROM peserta");
-        $tema    = query("SELECT * FROM tema");
+        $tema    = query("SELECT * FROM sertifikat");
 
     ?>
     <div class="container">
         <div class="p-5 mb-5 bg-success p-2 text-white bg-opacity-75 shadow-sm">
             <h1 class="text-center" style="color: white;">Data Pemberian Sertifikat</h1>
             <div class="text-center" style="height: auto; --bs-bg-opacity: .6;">
+            <label>Tema:</label>
             <?php foreach ($tema as $tm) : ?>
             <h3 style="color: white;"><?= $tm['tema']; ?> </h3>
             <?php endforeach; ?>
             </div>
         </div>
         <div class="header">
-            <a class="btn btn-primary btn-sm shadow-sm" style="float: right;" href="peserta_tambah.php">Tambah Data</a><br><br>
+            <a class="btn btn-primary btn-sm shadow-sm" style="float: right;" href="peserta_tambah.php">Tambah Data</a>
         </div>
         <table class="table table-bordered table-hover table-responsive text-center">
             <thead class="bg-success p-2 text-white bg-opacity-50">
@@ -50,7 +51,7 @@
                 <td><?= $no; ?></td>
                 <td>Sert/DTS-VSGA.<?= $pst["id_peserta"]; ?></td>
                 <td><?= $pst["nama"]; ?></td>
-                <td style="width: 10%;"><?= $pst["tgl_kegiatan"] ?></td>
+                <td><?= $pst["tgl_kegiatan"] ?></td>
                 <td><?= $pst["peran"]; ?></td>
                 <td>
                     <a class="btn btn-primary btn-sm" style="font-size: 10px;" href="peserta_lihat.php?id=<?= $pst['id_peserta']; ?>">Lihat</a>
