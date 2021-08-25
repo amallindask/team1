@@ -1,3 +1,13 @@
+    <?php 
+    // Menghubungkan ke database
+        require 'koneksi.php';
+
+    // Mengambil data dari database peserta
+        $peserta = query("SELECT * FROM peserta");
+        $tema    = query("SELECT * FROM sertifikat");
+
+    ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -11,15 +21,6 @@
     <title>Pemberian Sertifikat | CRUD</title>
   </head>
   <body>
-    <?php 
-    // Menghubungkan ke database
-        require 'koneksi.php';
-
-    // Mengambil data dari database peserta
-        $peserta = query("SELECT * FROM peserta");
-        $tema    = query("SELECT * FROM sertifikat");
-
-    ?>
     <div class="container">
         <div class="p-5 mb-5 bg-success p-2 text-white bg-opacity-75 shadow-sm">
             <h1 class="text-center" style="color: white;">Data Pemberian Sertifikat</h1>
