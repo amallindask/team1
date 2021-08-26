@@ -13,13 +13,22 @@
 	'<!DOCTYPE html>
 		<html>
 		<head>
-			<title>Data Peminjam</title>
+			<title>Cetak Sertifikat</title>
 		</head>
 		<body>
-		<center><h1>Cetak Sertifikat</h1></center>';
-				foreach ($peserta as $pst) :
-	   $html .= '';
-	   			endforeach;
+		<center></center>';
+				foreach ($peserta as $pst) {
+	   $html .= '<center>
+	   				<h5>KEMENTERIAN PENDIDIKAN DAN KEBUDAYAAN POLITEKNIK NEGERI CILACAP PUSAT PENELITIAN DAN PENGABDIAN KEPADA MASYARAKAT</h5>
+	   			</center><br>
+	   			<center>
+	   				<strong>SERTIFIKAT</strong><br>
+	   				No.0 '.$pst["id_peserta"].'/PL43 P.01/ VII/2020<br><br>
+	   				Diberikan Kepada <br>'.$pst["nama"].'
+	   			</center><br><br><br>
+	   			Atas peran serta sebagai <strong>'.$pst["peran"].'</strong> dalam kegiatan Webinar dengan tema"'.$pst["tema"].'" yang diselenggarakan pada '.$pst["tgl_kegiatan"].', dalam kurun waktu 4 (empat) jam pertemuan yang diselengarakan oleh Pusat Penelitian dan Pengabdian Masyarakat (P3M) Politeknik Negeri Cilacap.<br><br>
+	   			<center>'.$pst["tgl_sertifikat"].'</center>';
+	   			}
 	$html .='</table>
 			</body>
 			</html>';
