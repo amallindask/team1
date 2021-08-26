@@ -66,10 +66,10 @@
 	   			
 	   		<table>
 	   			<tr align="center">
-	   				<td width="600px"><u>Dr. Ir. Aris Tjahyanto M.Kom</U><br>
+	   				<td width="600px"><strong><u>Dr. Ir. Aris Tjahyanto M.Kom</U></strong><br>
 	   				Direktur Politeknik Negeri Cilacap</td>
 	   				
-	   				<td><u>Ganjar Ndaru Ikhtiagung, S.E., M.M.</u><br>
+	   				<td><strong><u>Ganjar Ndaru Ikhtiagung, S.E., M.M.</u></strong><br>
 	   				Kepala P3M Politeknik Negeri Cilacap</td>
 	   			</tr>
 	   			';
