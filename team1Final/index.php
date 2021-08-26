@@ -4,7 +4,6 @@
 
     // Mengambil data dari database peserta
         $peserta = query("SELECT * FROM peserta");
-        $tema    = query("SELECT * FROM sertifikat");
 
     ?>
 
@@ -26,9 +25,7 @@
             <h1 class="text-center" style="color: white;">Data Pemberian Sertifikat</h1>
             <div class="text-center" style="height: auto; --bs-bg-opacity: .6;">
             <label>Tema:</label>
-            <?php foreach ($tema as $tm) : ?>
-            <h3 style="color: white;"><?= $tm['tema']; ?> </h3>
-            <?php endforeach; ?>
+            <p>POLITEKNIK NEGERI CILACAP PUSAT PENELITIAN DAN PENGABDIAN KEPADA MASYARAKAT</p>
             </div>
         </div>
         <div class="header">
