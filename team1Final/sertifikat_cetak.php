@@ -13,9 +13,40 @@
 	'<!DOCTYPE html>
 		<html>
 		<head>
+			<style>
+			@page {
+                margin: 0cm 0cm;
+            }
+
+			body {
+                margin-top:    3cm;
+                margin-bottom: 1cm;
+                margin-left:   2cm;
+                margin-right:  2cm;
+            }
+			#watermark {
+                position: fixed;
+                bottom: 0px;
+                right: 0px;
+
+                width: 29.7cm;
+                height: 21cm;
+
+                z-index: -1000;
+            }
+            table {
+            	margin-top: 2cm;
+            	margin-left: 6cm;
+            }
+          
+            </style>
 			<title>Cetak Sertifikat</title>
 		</head>
-		<body background = "background.jpg">';
+		<body>
+			<div id="watermark">
+				<img src="background.jpg" height="100%" width="100%"/>
+			</div>
+			<main>';
 				foreach ($peserta as $pst) :
 	   $html .= '<center>
 	   				<h3>KEMENTERIAN PENDIDIKAN DAN KEBUDAYAAN POLITEKNIK NEGERI CILACAP <br> PUSAT PENELITIAN DAN PENGABDIAN KEPADA MASYARAKAT</h3>
@@ -25,15 +56,24 @@
 	   				No.0'.$pst["id_peserta"].'/PL43 P.01/ VII/2020<br><br><br>
 	   				Diberikan Kepada <br> <h2>'.$pst["nama"].'</h2>
 	   			</center><br><br><br>
+	   			<center>
 	   			Atas peran serta sebagai <strong>'.$pst["peran"].'</strong> dalam kegiatan Webinar dengan tema "'.$pst["tema"].'" yang diselenggarakan pada '.$pst["tgl_kegiatan"].', dalam kurun waktu 4 (empat) jam pertemuan yang diselengarakan oleh Pusat Penelitian dan Pengabdian Masyarakat (P3M) Politeknik Negeri Cilacap.<br><br>
-	   			<center>'.$pst["tgl_sertifikat"].'</center><br>
-	   			Ganjar Ndaru Ikhtiagung, S.E., M.M. <br>
-	   			ttd <br><br>
-	   			Dr. Ir. Aris Tjahyanto M.Kom <br>
-	   			ttd <br><br>
+	   			<center>'.$pst["tgl_sertifikat"].'</center>
+	   			
+	   		<table>
+	   			<tr>
+	   				<td>Ganjar Ndaru Ikhtiagung, S.E., M.M. <br>
+	   				<hr>NIP.</td>
+	   				<td></td>
+	   				<td></td>
+	   				<td></td>
+	   				<td>Dr. Ir. Aris Tjahyanto M.Kom <br>
+	   				<hr>NIP.</td>
+	   			</tr>
 	   			';
 	   			endforeach;
 	$html .='</table>
+			</main>
 			</body>
 			</html>';
 
