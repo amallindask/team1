@@ -36,7 +36,7 @@
             }
             table {
             	margin-top: 2cm;
-            	margin-left: 6cm;
+            	margin-left: 0cm;
             }
 
             p {
@@ -61,17 +61,16 @@
 	   				Diberikan Kepada <br> <h1>'.$pst["nama"].'</h1>
 	   			</center>
 	   			<center>
-	   			<p>Atas peran serta sebagai <strong>'.$pst["peran"].'</strong> dalam kegiatan Webinar dengan tema "'.$pst["tema"].'" yang diselenggarakan pada '.$pst["tgl_kegiatan"].', dalam kurun waktu 4 (empat) jam pertemuan yang diselengarakan oleh Pusat Penelitian dan Pengabdian Masyarakat (P3M) Politeknik Negeri Cilacap.</p><br>
-	   			<center> Cilacap, '.$pst["tgl_sertifikat"].'</center>
+	   			<p>Atas peran serta sebagai <strong>'.$pst["peran"].'</strong> dalam kegiatan Webinar dengan tema "'.$pst["tema"].'" yang diselenggarakan pada '.$pst["tgl_kegiatan"].', dalam kurun waktu 4 (empat) jam pertemuan yang diselengarakan oleh Pusat Penelitian dan Pengabdian Masyarakat (P3M) Politeknik Negeri Cilacap.</p>
+	   			<center><p> Cilacap, '.$pst["tgl_sertifikat"].'</p></center>
 	   			
 	   		<table>
 	   			<tr align="center">
-	   				<td>Dr. Ir. Aris Tjahyanto M.Kom<br>
-	   				<hr>Direktur Politeknik Negeri Cilacap</td>
-	   				<td></td><td></td><td></td><td></td><td></td>
-	   				<td></td><td></td><td></td><td></td><td></td>
-	   				<td>Ganjar Ndaru Ikhtiagung, S.E., M.M. <br>
-	   				<hr>Kepala P3M Politeknik Negeri Cilacap</td>
+	   				<td width="600px"><u>Dr. Ir. Aris Tjahyanto M.Kom</U><br>
+	   				Direktur Politeknik Negeri Cilacap</td>
+	   				
+	   				<td><u>Ganjar Ndaru Ikhtiagung, S.E., M.M.</u><br>
+	   				Kepala P3M Politeknik Negeri Cilacap</td>
 	   			</tr>
 	   			';
 	   			endforeach;
