@@ -37,25 +37,30 @@
             <tr>
                 <td>Jenis Kelamin</td>
                 <td>
-                    <input type="radio" class="form-check-input" name="gender" value="Laki-laki" required><label>Laki-Laki</label>
-                    <input type="radio" class="form-check-input" name="gender" value="Perempuan" required><label>Perempuan</label>
+                    <input type="radio" class="form-check-input" name="gender" value="Laki-laki" required><label> Laki-Laki</label>
+                    <input type="radio" class="form-check-input" name="gender" value="Perempuan" required><label> Perempuan</label>
+                </td>
+            </tr>            
+            <tr>
+                <td>Alamat</td>
+                <td><textarea class="form-control" name="alamat" rows="3" required></textarea></td>
+            </tr>
+            <tr>
+                <td>Tema</td>
+                <td><textarea class="form-control" name="tema" rows="3" required></textarea></td>
+            </tr>
+            <tr>
+                <td>Peran</td>
+                <td>
+                    <input type="radio" class="form-check-input" name="peran" value="Pemateri" required><label> Pemateri</label>
+                    <input type="radio" class="form-check-input" name="peran" value="Peserta" required><label> Peserta</label>
                 </td>
             </tr>
             <tr>
                 <td>Tanggal Kegiatan</td>
                 <td><input type="date" name="tgl_kegiatan" required></td>
             </tr>
-            <tr>
-                <td>Alamat</td>
-                <td><textarea class="form-control" name="alamat" rows="3" required></textarea></td>
-            </tr>
-            <tr>
-                <td>Peran</td>
-                <td>
-                    <input type="radio" class="form-check-input" name="peran" value="Pemateri" required><label>Pemateri</label>
-                    <input type="radio" class="form-check-input" name="peran" value="Peserta" required><label>Peserta</label>
-                </td>
-            </tr>
+            
             <tr>
                 <td>Tanggal Sertfikat</td>
                 <td><input type="date" name="tgl_sertifikat" required></td>
