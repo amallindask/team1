@@ -21,7 +21,7 @@
   </head>
   <body>
     <div class="container">
-        <div class="p-5 mb-1 bg-success text-white bg-opacity-75 shadow-sm">
+        <div class="p-5 mb-5 bg-success text-white bg-opacity-75 shadow-sm">
             <h1 class="text-center" style="color: white;">Data Pemberian Sertifikat</h1>
             <div class="text-center" style="height: auto; --bs-bg-opacity: .6;">
             </div>
@@ -32,9 +32,9 @@
         <table class="table table-bordered table-hover table-responsive text-center">
             <thead class="bg-success p-2 text-white bg-opacity-50">
             <tr>
-                <th>No</th>
+                <th class="col-1">No</th>
                 <th>Id Peserta</th>
-                <th class="col-4">Nama</th>
+                <th class="col-3">Nama</th>
                 <th>Tanggal Kegiatan</th>
                 <th>Peran</th>
                 <th class="col-3">Aksi</th>
