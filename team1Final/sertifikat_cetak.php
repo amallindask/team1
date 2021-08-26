@@ -17,7 +17,7 @@
 		</head>
 		<body style="background: url("Background.jpg") fixed-center;">
 		<center></center>';
-				foreach ($peserta as $pst) {
+				foreach ($peserta as $pst) :
 	   $html .= '<center>
 	   				<h3>KEMENTERIAN PENDIDIKAN DAN KEBUDAYAAN POLITEKNIK NEGERI CILACAP <br> PUSAT PENELITIAN DAN PENGABDIAN KEPADA MASYARAKAT</h3>
 	   			</center><br>
@@ -33,7 +33,7 @@
 	   			Dr. Ir. Aris Tjahyanto M.Kom <br>
 	   			ttd <br><br>
 	   			';
-	   			}
+	   			endforeach;
 	$html .='</table>
 			</body>
 			</html>';
