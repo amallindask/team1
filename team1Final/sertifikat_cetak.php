@@ -65,12 +65,11 @@
 	   			<center> Cilacap, '.$pst["tgl_sertifikat"].'</center>
 	   			
 	   		<table>
-	   			<tr>
+	   			<tr align="center">
 	   				<td>Dr. Ir. Aris Tjahyanto M.Kom<br>
 	   				<hr>Direktur Politeknik Negeri Cilacap</td>
-	   				<td></td>
-	   				<td></td>
-	   				<td></td>
+	   				<td></td><td></td><td></td><td></td><td></td>
+	   				<td></td><td></td><td></td><td></td><td></td>
 	   				<td>Ganjar Ndaru Ikhtiagung, S.E., M.M. <br>
 	   				<hr>Kepala P3M Politeknik Negeri Cilacap</td>
 	   			</tr>
