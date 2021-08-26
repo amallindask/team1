@@ -52,11 +52,11 @@
 			</div>
 			<main>';
 				foreach ($peserta as $pst) :
-	   $html .= '<center><br><br>
-	   				<h2>KEMENTERIAN PENDIDIKAN DAN KEBUDAYAAN POLITEKNIK NEGERI CILACAP <br> PUSAT PENELITIAN DAN PENGABDIAN KEPADA MASYARAKAT</h2>
+	   $html .= '<center>
+	   				<h2>KEMENTERIAN PENDIDIKAN DAN KEBUDAYAAN <br>POLITEKNIK NEGERI CILACAP <br> PUSAT PENELITIAN DAN PENGABDIAN KEPADA MASYARAKAT</h2>
 	   			</center><br>
 	   			<center>
-	   				<strong>SERTIFIKAT</strong><br>
+	   				<strong style="font-size: 30px;">SERTIFIKAT</strong><br>
 	   				No.0'.$pst["id_peserta"].'/PL43 P.01/ VII/2020<br><br><br>
 	   				Diberikan Kepada <br> <h1>'.$pst["nama"].'</h1>
 	   			</center>
