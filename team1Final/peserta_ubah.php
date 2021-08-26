@@ -37,7 +37,7 @@
         <table class="table fw-bold bg-info">
             <tr>
                 <td>Id Peserta</td>
-                <td><input type="hiddden" name="id_peserta" value="<?= $pst['id_peserta']; ?>" readonly></td>
+                <td><input class="form-control" name="id_peserta" value="No. 0<?= $pst['id_peserta']; ?>/PL43 P.01/ VII/2020" readonly></td>
             </tr>
             <tr>
                 <td>Nama</td>
@@ -54,10 +54,7 @@
                 <td>Alamat</td>
                 <td><textarea class="form-control" name="alamat" rows="3"><?= $pst['alamat']; ?></textarea></td>
             </tr>
-            <tr>
-                <td>Tema</td>
-                <td><textarea class="form-control" name="tema" rows="3"><?= $pst['tema']; ?></textarea></td>
-            </tr>
+            
             <tr>
                 <td>Peran</td>
                 <td>
