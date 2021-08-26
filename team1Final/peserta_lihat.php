@@ -89,7 +89,7 @@
               <td>Tanggal Sertifikat</td>
               <td>:</td>
               <td>
-                <label><?= $pst['tgl_kegiatan']; ?></label>
+                <label><?= $pst['tgl_sertifikat']; ?></label>
               </td>
             </tr>
         </table>
