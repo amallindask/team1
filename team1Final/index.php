@@ -13,6 +13,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/59ae7329be.js"></script>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
@@ -27,7 +28,7 @@
             </div>
         </div>
         <div class="header">
-            <a class="btn btn-primary btn-xlg shadow-xlg ml-2 mb-3" href="peserta_tambah.php">Tambah Data</a>
+            <a class="btn btn-primary btn-xlg shadow-xlg ml-2 mb-3" href="peserta_tambah.php"><i class="fa fa-user-plus"></i> Tambah Data</a>
         </div>
         <table class="table table-bordered table-hover table-responsive text-center">
             <thead class="bg-success p-2 text-white bg-opacity-50">
@@ -50,10 +51,10 @@
                 <td><?= $pst["tgl_kegiatan"] ?></td>
                 <td><?= $pst["peran"]; ?></td>
                 <td>
-                    <a class="btn btn-primary btn-sm" style="font-size: 10px;" href="peserta_lihat.php?id=<?= $pst['id_peserta']; ?>">Lihat</a>
-                    <a class="btn btn-warning btn-sm" style="font-size: 10px;" href="peserta_ubah.php?id=<?= $pst['id_peserta']; ?>">Ubah</a>
-                     <a class="btn btn-danger btn-sm" style="font-size: 10px;" href="peserta_hapus.php?id=<?= $pst['id_peserta']; ?>" onclick="return confirm('Anda yakin akan menghapus peserta ini?');">Hapus</a>
-                    <a class="btn btn-success btn-sm" style="font-size: 10px;" href="sertifikat_cetak.php?id=<?= $pst['id_peserta']; ?>" target="_blank">Cetak Sertifikat</a>
+                    <a class="btn btn-primary btn-sm" style="font-size: 8px;" href="peserta_lihat.php?id=<?= $pst['id_peserta']; ?>"><i class="fa fa-info-circle" aria-hidden="true"></i> Lihat</a>
+                    <a class="btn btn-warning btn-sm" style="font-size: 8px;" href="peserta_ubah.php?id=<?= $pst['id_peserta']; ?>"><i class="fa fa-pencil" aria-hidden="true"></i> Ubah</a>
+                    <a class="btn btn-danger btn-sm" style="font-size: 8px;" href="peserta_hapus.php?id=<?= $pst['id_peserta']; ?>" onclick="return confirm('Anda yakin akan menghapus peserta ini?');"><i class="fa fa-trash" aria-hidden="true"></i> Hapus</a>
+                    <a class="btn btn-success btn-sm" style="font-size: 8px;" href="sertifikat_cetak.php?id=<?= $pst['id_peserta']; ?>" target="_blank"><i class="fa fa-print" aria-hidden="true"></i> Cetak Sertifikat</a>
                 </td>
             </tr>
             </tbody>
