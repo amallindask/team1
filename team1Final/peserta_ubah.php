@@ -45,13 +45,8 @@
         </div>
         <form class="my-1 shadow-sm" action="" method="POST">
         <div class="card">
-            <div class="card-body">
-                <div class="row mb-3">
-            <label class="col-sm-2 col-form-label">ID Sertifikat</label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control" name="id_peserta" value="<?= $pst['id_peserta']; ?>" readonly>
-            </div>
-          </div>
+          <div class="card-body">
+          <input type="hidden" class="form-control" name="id_peserta" value="<?= $pst['id_peserta']; ?>" readonly>
           <div class="row mb-3">
             <label class="col-sm-2 col-form-label">Nama</label>
             <div class="col-sm-10">
@@ -110,8 +105,8 @@
           </div>
           <br>
           <center>
-            <button type="submit" class="btn btn-primary btn-sm" value="Simpan" name="simpan_ubah">Ubah</button>
-            <a href="index.php" type="submit" class="btn btn-danger btn-sm" value="Batal">Batal</a>
+            <button type="submit" class="btn btn-primary btn-xlg" value="Simpan" name="simpan_ubah">Ubah</button>
+            <a href="index.php" type="submit" class="btn btn-danger btn-xlg" value="Batal">Batal</a>
           </center>
             </div>
         </div>
