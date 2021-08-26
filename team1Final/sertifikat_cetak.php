@@ -57,7 +57,7 @@
 	   			</center><br>
 	   			<center>
 	   				<strong style="font-size: 30px;">SERTIFIKAT</strong><br>
-	   				No.0'.$pst["id_peserta"].'/PL43 P.01/ VII/2020<br><br><br>
+	   				No.0'.$pst["id_peserta"].'/PL43 P.01/ VII/2020<br>
 	   				Diberikan Kepada <br> <h1>'.$pst["nama"].'</h1>
 	   			</center>
 	   			<center>
