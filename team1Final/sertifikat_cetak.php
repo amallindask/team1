@@ -15,7 +15,7 @@
 		<head>
 			<title>Cetak Sertifikat</title>
 		</head>
-		<body>
+		<body style="background: url("Background.jpg") fixed-center;">
 		<center></center>';
 				foreach ($peserta as $pst) {
 	   $html .= '<center>
