@@ -48,59 +48,61 @@
           <div class="card-body">
           <input type="hidden" class="form-control" name="id_peserta" value="<?= $pst['id_peserta']; ?>" readonly>
           <div class="row mb-3">
-            <label class="col-sm-2 col-form-label">Nama</label>
+            <label class="col-sm-2 col-form-label" for="nama">Nama</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" name="nama" value="<?= $pst['nama']; ?>">
+              <input type="text" class="form-control" id="nama" name="nama" value="<?= $pst['nama']; ?>">
             </div>
           </div>
           <fieldset class="row mb-3">
             <legend class="col-form-label col-sm-2 pt-0">Jenis Kelamin</legend>
             <div class="col-sm-10">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="jenis_kelamin" value="L" <?php if($pst['jenis_kelamin'] == "L"){echo "checked";}else{echo " ";} ?>>
-                    <label class="form-check-label" for="gridRadios1">Laki-laki</label>
+                    <label class="form-check-label" for="laki">Laki-laki</label>
+                    <input class="form-check-input" type="radio" id="laki" name="jenis_kelamin" value="L" <?php if($pst['jenis_kelamin'] == "L"){echo "checked";}else{echo " ";} ?>>                    
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="jenis_kelamin" value="P" <?php if($pst['jenis_kelamin'] == "P"){echo "checked";}else{echo " ";} ?>>
-                    <label class="form-check-label" for="gridRadios2">Perempuan</label>
+                    <label class="form-check-label" for="perempuan">Perempuan</label>
+                    <input class="form-check-input" type="radio" id="perempuan" name="jenis_kelamin" value="P" <?php if($pst['jenis_kelamin'] == "P"){echo "checked";}else{echo " ";} ?>>                    
                 </div>
             </div>
           </fieldset>
           <div class="row mb-3">
-            <label class="col-sm-2 col-form-label">Alamat</label>
+            <label class="col-sm-2 col-form-label" for="alamat">Alamat</label>
             <div class="col-sm-10">
-              <textarea class="form-control" name="alamat" rows="3"><?= $pst['alamat']; ?></textarea>
+              <textarea class="form-control" id="alamat" name="alamat"><?= $pst['alamat']; ?></textarea>
             </div>
           </div>
            <div class="row mb-3">
-            <label class="col-sm-2 col-form-label">Tema Kegiatan</label>
+            <label class="col-sm-2 col-form-label" for="tema">Tema Kegiatan</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" name="tema" value="<?= $pst['tema']; ?>">
+              <textarea class="form-control" id="tema" name="tema"><?= $pst['tema']; ?></textarea>
             </div>
           </div>
           <fieldset class="row mb-3">
             <legend class="col-form-label col-sm-2 pt-0">Peran</legend>
             <div class="col-sm-10">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="peran" value="Pemateri" <?php if($pst['peran'] == "Pemateri"){echo "checked";}else{echo " ";} ?>>
-                    <label class="form-check-label" for="gridRadios1">Pemateri</label>
+                    <label class="form-check-label" for="Pemateri">Pemateri</label>
+                    <input class="form-check-input" type="radio" id="Pemateri" name="peran" value="Pemateri" <?php if($pst['peran'] == "Pemateri"){echo "checked";}else{echo " ";} ?>>
+                    
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="peran" value="Peserta" <?php if($pst['peran'] == "Peserta"){echo "checked";}else{echo " ";} ?>>
-                    <label class="form-check-label" for="gridRadios2">Peserta</label>
+                    <label class="form-check-label" for="Peserta">Peserta</label>
+                    <input class="form-check-input" type="radio" id="Peserta" name="peran" value="Peserta" <?php if($pst['peran'] == "Peserta"){echo "checked";}else{echo " ";} ?>>
+                    
                 </div>
             </div>
           </fieldset>
           <div class="row mb-3">
-            <label class="col-sm-2 col-form-label">Tanggal Kegiatan</label>
+            <label class="col-sm-2 col-form-label" for="tgl_kegiatan">Tanggal Kegiatan</label>
             <div class="col-sm-4">
-              <input type="date" class="form-control" name="tgl_kegiatan" value="<?= $pst['tgl_kegiatan']; ?>">
+              <input type="date" class="form-control" id="tgl_kegiatan" name="tgl_kegiatan" value="<?= $pst['tgl_kegiatan']; ?>">
             </div>
           </div>
           <div class="row mb-3">
-            <label class="col-sm-2 col-form-label">Tanggal Sertifikat</label>
+            <label class="col-sm-2 col-form-label" for="tgl_sertifikat">Tanggal Sertifikat</label>
             <div class="col-sm-4">
-              <input type="date" class="form-control" name="tgl_sertifikat" value="<?= $pst['tgl_sertifikat']; ?>">
+              <input type="date" class="form-control" id="tgl_sertifikat" name="tgl_sertifikat" value="<?= $pst['tgl_sertifikat']; ?>">
             </div>
           </div>
           <br>
