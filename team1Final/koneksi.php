@@ -57,12 +57,19 @@
 			global $conn;
 
 			$id_sertifikat 	= $data['id_sertifikat'];
-			$judul 			= $data['head'];
+			$judul 			= $data['judul'];
 			$no_sertifikat 	= $data['no_sertifikat'];
 			$tema 			= $data['tema'];
 			$tgl_kegiatan	= $data['tgl_kegiatan'];
 
-			mysqli_query($conn, "UPDATE sertifikat SET ");
+			mysqli_query($conn, "UPDATE sertifikat SET
+									head 		    = '$judul',
+									no_sertifikat   = '$no_sertifikat',
+									tema 		    = '$tema',
+									tgl_kegiatan    = '$tgl_kegiatan',
+								WHERE id_sertifikat = $id_sertifikat");
+
+			return mysqli_affected_rows($conn);
 
 		}
 

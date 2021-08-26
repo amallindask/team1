@@ -33,7 +33,6 @@
         </div>
         <div class="header">
             <a class="btn btn-primary btn-xlg shadow-xlg ml-2 mb-3" href="peserta_tambah.php">Tambah Data</a>
-            <a class="btn btn-primary btn-xlg shadow-xlg ml-2 mb-3" href="sertifikat_ubah.php?id=1">Setting Sertifikat</a>
         </div>
         <table class="table table-bordered table-hover table-responsive text-center">
             <thead class="bg-success p-2 text-white bg-opacity-50">
