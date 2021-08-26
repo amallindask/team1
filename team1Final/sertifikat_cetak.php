@@ -38,6 +38,10 @@
             	margin-top: 2cm;
             	margin-left: 6cm;
             }
+
+            p {
+            	font-size: 20px;
+            }
           
             </style>
 			<title>Cetak Sertifikat</title>
@@ -54,21 +58,21 @@
 	   			<center>
 	   				<strong>SERTIFIKAT</strong><br>
 	   				No.0'.$pst["id_peserta"].'/PL43 P.01/ VII/2020<br><br><br>
-	   				Diberikan Kepada <br> <h2>'.$pst["nama"].'</h2>
-	   			</center><br><br><br>
+	   				Diberikan Kepada <br> <h1>'.$pst["nama"].'</h1>
+	   			</center>
 	   			<center>
-	   			Atas peran serta sebagai <strong>'.$pst["peran"].'</strong> dalam kegiatan Webinar dengan tema "'.$pst["tema"].'" yang diselenggarakan pada '.$pst["tgl_kegiatan"].', dalam kurun waktu 4 (empat) jam pertemuan yang diselengarakan oleh Pusat Penelitian dan Pengabdian Masyarakat (P3M) Politeknik Negeri Cilacap.<br><br>
-	   			<center>'.$pst["tgl_sertifikat"].'</center>
+	   			<p>Atas peran serta sebagai <strong>'.$pst["peran"].'</strong> dalam kegiatan Webinar dengan tema "'.$pst["tema"].'" yang diselenggarakan pada '.$pst["tgl_kegiatan"].', dalam kurun waktu 4 (empat) jam pertemuan yang diselengarakan oleh Pusat Penelitian dan Pengabdian Masyarakat (P3M) Politeknik Negeri Cilacap.</p><br>
+	   			<center> Cilacap, '.$pst["tgl_sertifikat"].'</center>
 	   			
 	   		<table>
 	   			<tr>
 	   				<td>Dr. Ir. Aris Tjahyanto M.Kom<br>
-	   				<hr>NIP.</td>
+	   				<hr>Direktur Politeknik Negeri Cilacap</td>
 	   				<td></td>
 	   				<td></td>
 	   				<td></td>
 	   				<td>Ganjar Ndaru Ikhtiagung, S.E., M.M. <br>
-	   				<hr>NIP.</td>
+	   				<hr>Kepala P3M Politeknik Negeri Cilacap</td>
 	   			</tr>
 	   			';
 	   			endforeach;
