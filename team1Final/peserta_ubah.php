@@ -37,7 +37,7 @@
         <table class="table fw-bold bg-info">
             <tr>
                 <td>Id Peserta</td>
-                <td><input class="form-control" name="id_peserta" value="No. 0<?= $pst['id_peserta']; ?>/PL43 P.01/ VII/2020" readonly></td>
+                <td><input type="hidden"class="form-control" name="id_peserta" value="<?= $pst['id_peserta']; ?>" readonly></td>
             </tr>
             <tr>
                 <td>Nama</td>
