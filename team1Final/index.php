@@ -32,7 +32,8 @@
             </div>
         </div>
         <div class="header">
-            <a class="btn btn-primary btn-sm shadow-sm" style="float: right;" href="peserta_tambah.php">Tambah Data</a>
+            <a class="btn btn-primary btn-xlg shadow-xlg ml-2 mb-3" href="peserta_tambah.php">Tambah Data</a>
+            <a class="btn btn-primary btn-xlg shadow-xlg ml-2 mb-3" href="sertifikat_ubah.php?id=1">Setting Sertifikat</a>
         </div>
         <table class="table table-bordered table-hover table-responsive text-center">
             <thead class="bg-success p-2 text-white bg-opacity-50">
@@ -50,7 +51,7 @@
             <tbody>
             <tr>                
                 <td><?= $no; ?></td>
-                <td>Sert/DTS-VSGA.<?= $pst["id_peserta"]; ?></td>
+                <td>No. <?= $pst["id_peserta"]; ?>/PL43 P.01/ VII/2020</td>
                 <td><?= $pst["nama"]; ?></td>
                 <td><?= $pst["tgl_kegiatan"] ?></td>
                 <td><?= $pst["peran"]; ?></td>
@@ -58,7 +59,7 @@
                     <a class="btn btn-primary btn-sm" style="font-size: 10px;" href="peserta_lihat.php?id=<?= $pst['id_peserta']; ?>">Lihat</a>
                     <a class="btn btn-warning btn-sm" style="font-size: 10px;" href="peserta_ubah.php?id=<?= $pst['id_peserta']; ?>">Ubah</a>
                      <a class="btn btn-danger btn-sm" style="font-size: 10px;" href="peserta_hapus.php?id=<?= $pst['id_peserta']; ?>" onclick="return confirm('Anda yakin akan menghapus peserta ini?');">Hapus</a>
-                    <a class="btn btn-success btn-sm" style="font-size: 10px;" href="cetak_sertifikat.php?id=<?= $pst['id_peserta']; ?>" target="_blank">Cetak Sertifikat</a>
+                    <a class="btn btn-success btn-sm" style="font-size: 10px;" href="sertifikat_cetak.php?id=<?= $pst['id_peserta']; ?>" target="_blank">Cetak Sertifikat</a>
                 </td>
             </tr>
             </tbody>

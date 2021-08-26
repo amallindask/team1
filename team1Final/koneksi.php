@@ -17,12 +17,12 @@
 		function peserta_tambah($data) {
 			global $conn;
 
-			$nama 		  	= $_POST['nama'];
-			$gender			= $_POST['gender'];
-			$tgl_kegiatan	= $_POST['tgl_kegiatan'];
-			$alamat 		= $_POST['alamat'];
-			$peran			= $_POST['peran'];
-			$tgl_sertifikat	= $_POST['tgl_sertifikat'];
+			$nama 		  	= $data['nama'];
+			$gender			= $data['gender'];
+			$tgl_kegiatan	= $data['tgl_kegiatan'];
+			$alamat 		= $data['alamat'];
+			$peran			= $data['peran'];
+			$tgl_sertifikat	= $data['tgl_sertifikat'];
 
  			mysqli_query($conn, "INSERT INTO peserta VALUES('','$nama','$gender','$tgl_kegiatan','$alamat','$peran','$tgl_kegiatan')");
  			return mysqli_affected_rows($conn);
@@ -32,13 +32,13 @@
 		function peserta_ubah($data) {
 			global $conn;
 
-			$id_peserta     = $_POST['id_peserta'];
-	        $nama           = $_POST['nama'];
-	        $jenis_kelamin  = $_POST['jenis_kelamin'];
-	        $tgl_kegiatan   = $_POST['tgl_kegiatan'];
-	        $alamat         = $_POST['alamat'];
-	        $peran          = $_POST['peran'];
-	        $tgl_sertifikat = $_POST['tgl_sertifikat'];
+			$id_peserta     = $data['id_peserta'];
+	        $nama           = $data['nama'];
+	        $jenis_kelamin  = $data['jenis_kelamin'];
+	        $tgl_kegiatan   = $data['tgl_kegiatan'];
+	        $alamat         = $data['alamat'];
+	        $peran          = $data['peran'];
+	        $tgl_sertifikat = $data['tgl_sertifikat'];
 
 	        mysqli_query($conn, "UPDATE peserta SET
 	        					nama 			= '$nama',
@@ -50,6 +50,20 @@
 	        			WHERE 	id_peserta 		= $id_peserta");
 
             return mysqli_affected_rows($conn);
+		}
+
+	// Mengubah Sertifikat
+		function sertifikat_ubah($data) {
+			global $conn;
+
+			$id_sertifikat 	= $data['id_sertifikat'];
+			$judul 			= $data['head'];
+			$no_sertifikat 	= $data['no_sertifikat'];
+			$tema 			= $data['tema'];
+			$tgl_kegiatan	= $data['tgl_kegiatan'];
+
+			mysqli_query($conn, "UPDATE sertifikat SET ");
+
 		}
 
 ?>

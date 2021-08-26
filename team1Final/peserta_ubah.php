@@ -2,6 +2,12 @@
     // Menghubungkan ke database
         require 'koneksi.php';
 
+    // Mengambil data dari URL
+        $id = $_GET['id'];
+
+    // Mengambil data dari database
+        $pst = query("SELECT * FROM peserta WHERE id_peserta = $id") [0];
+
     // Mengubah peserta
         if (isset ($_POST["simpan_ubah"]) ) {
             if (peserta_ubah($_POST) > 0 ){
@@ -17,8 +23,7 @@
               }
         }
 
-    // Mengambil data dari database
-        $peserta = query("SELECT * FROM peserta");
+
 ?>
 
 <html>
@@ -29,7 +34,6 @@
 <body>
     <h1 id="header">Ubah Data Sertifikat</h1>
     <form action="" method="POST">
-        <?php foreach ($peserta as $pst) : ?>
         <table>
             <tr>
                 <td><input type="hidden" name="id_peserta" value="<?= $pst["id_peserta"]; ?>"></td>
@@ -65,7 +69,6 @@
                 <td><input type="date" name="tgl_sertifikat" value="<?= $pst["tgl_sertifikat"]; ?>"></td>
             </tr>
         </table>
-        <?php endforeach; ?>
         <hr>
         <input type="submit" class="simpan" value="Simpan" name="simpan_ubah">
         <a href="lihat.php"><input type="button" class="batal" value="Batal"></a>
