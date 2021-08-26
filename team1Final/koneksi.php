@@ -18,14 +18,14 @@
 			global $conn;
 
 			$nama 		  	= $data['nama'];
-			$gender			= $data['gender'];
+			$jenis_kelamin	= $data['jenis_kelamin'];
 			$tgl_kegiatan	= $data['tgl_kegiatan'];
 			$alamat 		= $data['alamat'];
 			$peran			= $data['peran'];
 			$tema 			= $data['tema'];
 			$tgl_sertifikat	= $data['tgl_sertifikat'];
 
- 			mysqli_query($conn, "INSERT INTO peserta VALUES('','$nama','$gender','$tgl_kegiatan','$alamat','$peran','$tema','$tgl_kegiatan')");
+ 			mysqli_query($conn, "INSERT INTO peserta VALUES('','$nama','$jenis_kelamin','$tgl_kegiatan','$alamat','$peran','$tema','$tgl_kegiatan')");
  			return mysqli_affected_rows($conn);
 		}
 
@@ -39,6 +39,7 @@
 	        $tgl_kegiatan   = $data['tgl_kegiatan'];
 	        $alamat         = $data['alamat'];
 	        $peran          = $data['peran'];
+	        $tema 			= $data['tema'];
 	        $tgl_sertifikat = $data['tgl_sertifikat'];
 
 	        mysqli_query($conn, "UPDATE peserta SET

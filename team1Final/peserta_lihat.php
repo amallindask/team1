@@ -21,7 +21,7 @@
 	<table>
             <tr>
                 <td>Id Peserta</td>
-                <td><label>Sert/DTS-VSGA.<?= $pst['id_peserta']; ?></label></td>
+                <td><label>No. 0<?= $pst["id_peserta"]; ?>/PL43 P.01/ VII/2020</label></td>
             </tr>
             <tr>
                 <td>Nama</td>

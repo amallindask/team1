@@ -47,7 +47,7 @@
             <tbody>
             <tr>                
                 <td><?= $no; ?></td>
-                <td>No. <?= $pst["id_peserta"]; ?>/PL43 P.01/ VII/2020</td>
+                <td>No. 0<?= $pst["id_peserta"]; ?>/PL43 P.01/ VII/2020</td>
                 <td><?= $pst["nama"]; ?></td>
                 <td><?= $pst["tgl_kegiatan"] ?></td>
                 <td><?= $pst["peran"]; ?></td>

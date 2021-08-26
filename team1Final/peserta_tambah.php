@@ -31,14 +31,18 @@
     <form class="my-1 shadow-sm" action="" method="POST">
         <table class="table fw-bold bg-info">
             <tr>
+                <td>Id Peserta</td>
+                <td><input class="form-control" type="text" value="No. /PL43 P.01/ VII/2020" readonly></td>
+            </tr>
+            <tr>
                 <td>Nama</td>
                 <td><input class="form-control" type="text" name="nama" required></td>
             </tr>
             <tr>
                 <td>Jenis Kelamin</td>
                 <td>
-                    <input type="radio" class="form-check-input" name="gender" value="Laki-laki" required><label> Laki-Laki</label>
-                    <input type="radio" class="form-check-input" name="gender" value="Perempuan" required><label> Perempuan</label>
+                    <input type="radio" class="form-check-input" name="jenis_kelamin" value="L" required><label> Laki-Laki</label>
+                    <input type="radio" class="form-check-input" name="jenis_kelamin" value="P" required><label> Perempuan</label>
                 </td>
             </tr>            
             <tr>

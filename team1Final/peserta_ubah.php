@@ -17,13 +17,11 @@
                     </script>";
             } else{
                 echo "<script>
-                        alert('BERHASIL');
-                        document.location.href = 'peserta_ubah.php';
+                        alert('GAGAL');
+                        document.location.href = 'index.php';
                     </script>";
               }
         }
-
-
 ?>
 
 <html>
@@ -35,6 +33,7 @@
     <h1 id="header">Ubah Data Sertifikat</h1>
     <form action="" method="POST">
         <table>
+            <input type="hiddden" name="id_peserta" value="<?= $pst['id_peserta']; ?>">
             <tr>
                 <td>Nama</td>
                 <td><input class="form-control" type="text" name="nama" value="<?= $pst['nama']; ?>"></td>
@@ -42,8 +41,8 @@
             <tr>
                 <td>Jenis Kelamin</td>
                 <td>
-                    <input type="radio" class="form-check-input" name="gender" value="Laki-laki"><label> Laki-Laki</label>
-                    <input type="radio" class="form-check-input" name="gender" value="Perempuan"><label> Perempuan</label>
+                    <input type="radio" class="form-check-input" name="jenis_kelamin" value="L" <?php if($pst['jenis_kelamin'] == "L"){echo "checked";}else{echo " ";} ?>><label> Laki-Laki</label>
+                    <input type="radio" class="form-check-input" name="jenis_kelamin" value="P" <?php if($pst['jenis_kelamin'] == "P"){echo "checked";}else{echo " ";} ?>><label> Perempuan</label>
                 </td>
             </tr>            
             <tr>
@@ -57,8 +56,8 @@
             <tr>
                 <td>Peran</td>
                 <td>
-                    <input type="radio" class="form-check-input" name="peran" value="Pemateri"><label> Pemateri</label>
-                    <input type="radio" class="form-check-input" name="peran" value="Peserta"><label> Peserta</label>
+                    <input type="radio" class="form-check-input" name="peran" value="Pemateri" <?php if($pst['peran'] == "Pemateri"){echo "checked";}else{echo " ";} ?> ><label> Pemateri</label>
+                    <input type="radio" class="form-check-input" name="peran" value="Peserta" <?php if($pst['peran'] == "Peserta"){echo "checked";}else{echo " ";} ?> ><label> Peserta</label>
                 </td>
             </tr>
             <tr>
