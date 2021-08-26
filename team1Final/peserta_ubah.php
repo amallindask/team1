@@ -25,15 +25,20 @@
 ?>
 
 <html>
-<head>    
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">    
     <title>Edit Data Peserta</title>
 </head>
  
-<body>
-    <h1 id="header">Ubah Data Sertifikat</h1>
-    <form action="" method="POST">
-        <table>
-            <input type="hiddden" name="id_peserta" value="<?= $pst['id_peserta']; ?>">
+<body style="--bs-body-color: #333;">
+    <div class="container w-50">
+    <h1 class="p-2 text-center bg-warning shadow-sm">Ubah Data Sertifikat</h1>
+    <form class="my-1 shadow-sm" action="" method="POST">
+        <table class="table fw-bold bg-info">
+            <tr>
+                <td>Id Peserta</td>
+                <td><input type="hiddden" name="id_peserta" value="<?= $pst['id_peserta']; ?>" readonly></td>
+            </tr>
             <tr>
                 <td>Nama</td>
                 <td><input class="form-control" type="text" name="nama" value="<?= $pst['nama']; ?>"></td>
@@ -71,8 +76,8 @@
             </tr>
         </table>
         <hr>
-        <input type="submit" class="simpan" value="Simpan" name="simpan_ubah">
-        <a href="lihat.php"><input type="button" class="batal" value="Batal"></a>
+        <input type="submit" class="button" value="Simpan" name="simpan_ubah">
+        <a href="index.php"><input type="button" class="button" value="Batal"></a>
     </form>
 </body>
 </html>

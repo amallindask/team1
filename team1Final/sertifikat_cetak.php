@@ -19,15 +19,20 @@
 		<center></center>';
 				foreach ($peserta as $pst) {
 	   $html .= '<center>
-	   				<h5>KEMENTERIAN PENDIDIKAN DAN KEBUDAYAAN POLITEKNIK NEGERI CILACAP PUSAT PENELITIAN DAN PENGABDIAN KEPADA MASYARAKAT</h5>
+	   				<h3>KEMENTERIAN PENDIDIKAN DAN KEBUDAYAAN POLITEKNIK NEGERI CILACAP <br> PUSAT PENELITIAN DAN PENGABDIAN KEPADA MASYARAKAT</h3>
 	   			</center><br>
 	   			<center>
 	   				<strong>SERTIFIKAT</strong><br>
-	   				No.0'.$pst["id_peserta"].'/PL43 P.01/ VII/2020<br><br>
-	   				Diberikan Kepada <br>'.$pst["nama"].'
+	   				No.0'.$pst["id_peserta"].'/PL43 P.01/ VII/2020<br><br><br>
+	   				Diberikan Kepada <br> <h2>'.$pst["nama"].'</h2>
 	   			</center><br><br><br>
 	   			Atas peran serta sebagai <strong>'.$pst["peran"].'</strong> dalam kegiatan Webinar dengan tema "'.$pst["tema"].'" yang diselenggarakan pada '.$pst["tgl_kegiatan"].', dalam kurun waktu 4 (empat) jam pertemuan yang diselengarakan oleh Pusat Penelitian dan Pengabdian Masyarakat (P3M) Politeknik Negeri Cilacap.<br><br>
-	   			<center>'.$pst["tgl_sertifikat"].'</center>';
+	   			<center>'.$pst["tgl_sertifikat"].'</center><br>
+	   			Ganjar Ndaru Ikhtiagung, S.E., M.M. <br>
+	   			ttd <br><br>
+	   			Dr. Ir. Aris Tjahyanto M.Kom <br>
+	   			ttd <br><br>
+	   			';
 	   			}
 	$html .='</table>
 			</body>
@@ -35,6 +40,7 @@
 
 	$dompdf = new dompdf();
 	$dompdf-> load_html($html);
+	$dompdf-> setPaper('A4', 'landscape');
 	$dompdf-> render();
 	$dompdf-> stream('Data_Transaksi', array("Attachment" => 0 ));
 ?>
