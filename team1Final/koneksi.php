@@ -22,9 +22,10 @@
 			$tgl_kegiatan	= $data['tgl_kegiatan'];
 			$alamat 		= $data['alamat'];
 			$peran			= $data['peran'];
+			$tema 			= $data['tema'];
 			$tgl_sertifikat	= $data['tgl_sertifikat'];
 
- 			mysqli_query($conn, "INSERT INTO peserta VALUES('','$nama','$gender','$tgl_kegiatan','$alamat','$peran','$tgl_kegiatan')");
+ 			mysqli_query($conn, "INSERT INTO peserta VALUES('','$nama','$gender','$tgl_kegiatan','$alamat','$peran','$tema','$tgl_kegiatan')");
  			return mysqli_affected_rows($conn);
 		}
 
@@ -46,6 +47,7 @@
 	        					tgl_kegiatan 	= '$tgl_kegiatan',
 	        					alamat 			= '$alamat',
 	        					peran 			= '$peran',
+	        					tema 			= '$tema',
 	        					tgl_sertifikat  = '$tgl_sertifikat'
 	        			WHERE 	id_peserta 		= $id_peserta");
 

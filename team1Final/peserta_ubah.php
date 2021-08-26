@@ -36,37 +36,39 @@
     <form action="" method="POST">
         <table>
             <tr>
-                <td><input type="hidden" name="id_peserta" value="<?= $pst["id_peserta"]; ?>"></td>
-            </tr>
-            <tr>
                 <td>Nama</td>
-                <td><input type="text" name="nama" value="<?= $pst["nama"]; ?>"></td>
+                <td><input class="form-control" type="text" name="nama" value="<?= $pst['nama']; ?>"></td>
             </tr>
             <tr>
                 <td>Jenis Kelamin</td>
                 <td>
-                    <input type="radio" name="jenis_kelamin" value="Laki-laki" checked> Laki-laki
-                    <input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan
+                    <input type="radio" class="form-check-input" name="gender" value="Laki-laki"><label> Laki-Laki</label>
+                    <input type="radio" class="form-check-input" name="gender" value="Perempuan"><label> Perempuan</label>
                 </td>
-            </tr>
-            <tr>
-                <td>Tanggal Kegiatan</td>
-                <td><input type="date" name="tgl_kegiatan" value="<?= $pst["tgl_kegiatan"]; ?>"></td>
-            </tr>
+            </tr>            
             <tr>
                 <td>Alamat</td>
-                <td><textarea name="alamat" rows="2"><?= $pst["alamat"]; ?></textarea></td>
+                <td><textarea class="form-control" name="alamat" rows="3"><?= $pst['alamat']; ?></textarea></td>
+            </tr>
+            <tr>
+                <td>Tema</td>
+                <td><textarea class="form-control" name="tema" rows="3"><?= $pst['tema']; ?></textarea></td>
             </tr>
             <tr>
                 <td>Peran</td>
                 <td>
-                    <input type="radio" name="peran" value="Pemateri" checked=""><label>Pemateri</label>
-                    <input type="radio" name="peran" value="Peserta"><label>Peserta</label>
+                    <input type="radio" class="form-check-input" name="peran" value="Pemateri"><label> Pemateri</label>
+                    <input type="radio" class="form-check-input" name="peran" value="Peserta"><label> Peserta</label>
                 </td>
             </tr>
             <tr>
+                <td>Tanggal Kegiatan</td>
+                <td><input type="date" name="tgl_kegiatan" value="<?= $pst['tgl_kegiatan']; ?>"></td>
+            </tr>
+            
+            <tr>
                 <td>Tanggal Sertfikat</td>
-                <td><input type="date" name="tgl_sertifikat" value="<?= $pst["tgl_sertifikat"]; ?>"></td>
+                <td><input type="date" name="tgl_sertifikat" value="<?= $pst['tgl_sertifikat']; ?>"></td>
             </tr>
         </table>
         <hr>
