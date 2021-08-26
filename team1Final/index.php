@@ -24,8 +24,6 @@
         <div class="p-5 mb-5 bg-success p-2 text-white bg-opacity-75 shadow-sm">
             <h1 class="text-center" style="color: white;">Data Pemberian Sertifikat</h1>
             <div class="text-center" style="height: auto; --bs-bg-opacity: .6;">
-            <label>Tema:</label>
-            <p>POLITEKNIK NEGERI CILACAP PUSAT PENELITIAN DAN PENGABDIAN KEPADA MASYARAKAT</p>
             </div>
         </div>
         <div class="header">

@@ -29,7 +29,7 @@
             </tr>
             <tr>
                 <td>Jenis Kelamin</td>
-                <td><label><?= $pst['jenis_kelamin']; ?></label></td>
+                <td><label><?php if($pst['jenis_kelamin'] == "L"){echo "Laki Laki";}else{echo "Perempuan";} ?></label></td>
             </tr>
             <tr>
                 <td>Tanggal Kegiatan</td>
