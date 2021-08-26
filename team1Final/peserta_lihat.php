@@ -1,58 +1,93 @@
 <?php 
-	// Menghubungkan ke database
-		require 'koneksi.php';
+  // Menghubungkan ke database
+    require 'koneksi.php';
 
-	// Menggabil data peserta
-		$id 		= $_GET['id'];
-		$peserta 	= mysqli_query($conn, "SELECT * FROM peserta WHERE id_peserta = $id");
+  // Menggabil data peserta
+    $id     = $_GET['id'];
+    $peserta  = mysqli_query($conn, "SELECT * FROM peserta WHERE id_peserta = $id");
 ?>
-
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-	<title>Detail Peserta</title>
-	<link rel="stylesheet" type="text/css" href="css/tampilan-simpan.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>Pemberian Sertifikat | CRUD</title>
 </head>
 <body>
-<center>
-	<h1>Detail Peserta</h1>
-</center>
-<?php foreach ( $peserta as $pst ) : ?>
-	<table>
+    <div class="container">
+      <div class="p-5 mb-3 bg-success p-2 text-white bg-opacity-75 shadow-sm">
+          <h1 class="text-center" style="color: white;">Lihat Data Sertifikat</h1>
+          <div class="text-center" style="height: auto; --bs-bg-opacity: .6;">
+          </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+           <?php foreach ( $peserta as $pst ) : ?>
+           <table class="table table-striped">
             <tr>
-                <td>Id Peserta</td>
-                <td><label>No. 0<?= $pst["id_peserta"]; ?>/PL43 P.01/ VII/2020</label></td>
+                <td style="width: 20%;">Id Peserta</td>
+                <td style="width: 10%">:</td>
+                <td>
+                  <label>No. 0<?= $pst["id_peserta"]; ?>/PL43 P.01/ VII/2020</label>
+                </td>
             </tr>
             <tr>
-                <td>Nama</td>
-                <td><label><?= $pst['nama']; ?></label></td>
+                <td style="width: 20%;">Nama</td>
+                <td>:</td>
+                <td>
+                  <label><?= $pst['nama']; ?></label>
+                </td>
             </tr>
             <tr>
                 <td>Jenis Kelamin</td>
-                <td><label><?php if($pst['jenis_kelamin'] == "L"){echo "Laki Laki";}else{echo "Perempuan";} ?></label></td>
+                <td>:</td>
+                <td>
+                  <label>
+                    <?php if($pst['jenis_kelamin'] == "L"){
+                      echo "Laki Laki";}else{echo "Perempuan";
+                    } ?>
+                    </label>
+                </td>
             </tr>
             <tr>
                 <td>Tanggal Kegiatan</td>
-                <td><label><?= $pst['tgl_kegiatan']; ?></label></td>
+                <td>:</td>
+                <td>
+                  <label><?= $pst['tgl_kegiatan']; ?></label>
+                </td>
             </tr>
             <tr>
                 <td>Alamat</td>
-                <td><label><?= $pst['alamat']; ?></label><td>
+                <td>:</td>
+                <td>
+                  <label><?= $pst['alamat']; ?></label>
+                </td>
             </tr>
             <tr>
                 <td>Peran</td>
-                <td><label><?= $pst['peran']; ?></label></td>
+                <td>:</td>
+                <td>
+                  <label><?= $pst['peran']; ?></label>
+                </td>
             </tr>
             <tr>
-            	<td>Tanggal Sertifikat</td>
-            	<td><label><?= $pst['tgl_sertifikat']; ?></label></td>
+              <td>Tanggal Sertifikat</td>
+              <td>:</td>
+              <td>
+                <label><?= $pst['tgl_sertifikat']; ?></label>
+              </td>
             </tr>
         </table>
-<?php endforeach; ?>
-<center>
-        <a class="btn btn-warning btn-sm" style="font-size: 10px;" href="peserta_ubah.php?id=<?= $pst['id_peserta']; ?>">Ubah</a>
-        <a class="btn btn-danger btn-sm" style="font-size: 10px;" href="peserta_hapus.php?id=<?= $pst['id_peserta']; ?>" onclick="return confirm('Anda yakin akan menghapus peserta ini?');">Hapus</a>
-        <a class="btn btn-success btn-sm" style="font-size: 10px;" href="cetak_sertifikat.php?id=<?= $pst['id_peserta']; ?>" target="_blank">Cetak Sertifikat</a>
-</center>
+        <?php endforeach; ?>
+        </div>
+      </div>  
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 </html>

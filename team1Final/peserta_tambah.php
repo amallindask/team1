@@ -1,79 +1,117 @@
 <?php 
     // Menghubungkan ke database
-        require 'koneksi.php';
+require 'koneksi.php';
 
     // Menambah peserta
-      if( isset($_POST["simpan"]) ) {
-        if (peserta_tambah($_POST) > 0) {
-            echo "<script>
-                    alert('BERHASIL');
-                    document.location.href = 'index.php';
-                 </script>";
-        } else{
-            echo "<script>
-                    alert('GAGAL');
-                    document.location.href = 'peserta_tambah.php';
-                 </script>";
-          }
-      }
+if( isset($_POST["simpan"]) ) {
+    if (peserta_tambah($_POST) > 0) {
+        echo "<script>
+        alert('BERHASIL');
+        document.location.href = 'index.php';
+        </script>";
+    } else{
+        echo "<script>
+        alert('GAGAL');
+        document.location.href = 'peserta_tambah.php';
+        </script>";
+    }
+}
 ?>
 
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
     <title>Pemberian Sertifikat | CRUD</title>
 </head>
+<body>
+    <div class="container">
+        <div class="p-5 mb-3 bg-success p-2 text-white bg-opacity-75 shadow-sm">
+            <h1 class="text-center" style="color: white;">Tambah Data Sertifikat</h1>
+            <div class="text-center" style="height: auto; --bs-bg-opacity: .6;">
+            </div>
+        </div>
+        <form class="my-1 shadow-sm" action="" method="POST">
+        <div class="card">
+            <div class="card-body">
+                <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">ID Sertifikat</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" value="No. /PL43 P.01/ VII/2020" readonly>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Nama</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="nama" required="required">
+            </div>
+          </div>
+          <fieldset class="row mb-3">
+            <legend class="col-form-label col-sm-2 pt-0">Jenis Kelamin</legend>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="jenis_kelamin" value="L">
+                    <label class="form-check-label" for="gridRadios1">Laki-laki</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="jenis_kelamin" value="P">
+                    <label class="form-check-label" for="gridRadios2">Perempuan</label>
+                </div>
+            </div>
+          </fieldset>
+          <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Alamat</label>
+            <div class="col-sm-10">
+              <textarea class="form-control" name="alamat" rows="3" required="required"></textarea>
+            </div>
+          </div>
+           <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Tema Kegiatan</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="tema" required="required">
+            </div>
+          </div>
+          <fieldset class="row mb-3">
+            <legend class="col-form-label col-sm-2 pt-0">Peran</legend>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="peran" value="Pemateri">
+                    <label class="form-check-label" for="gridRadios1">Pemateri</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="peran" value="Peserta">
+                    <label class="form-check-label" for="gridRadios2">Peserta</label>
+                </div>
+            </div>
+          </fieldset>
+          <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Tanggal Kegiatan</label>
+            <div class="col-sm-4">
+              <input type="date" class="form-control" name="tgl_kegiatan" required="required">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Tanggal Sertifikat</label>
+            <div class="col-sm-4">
+              <input type="date" class="form-control" name="tgl_sertifikat" required="required">
+            </div>
+          </div>
+          <br>
+          <center>
+            <button type="submit" class="btn btn-primary btn-sm" value="Simpan" name="simpan">Simpan</button>
+            <a href="index.php" type="submit" class="btn btn-danger btn-sm" value="Batal">Batal</a>
+          </center>
+            </div>
+        </div>
+      </form>
+  </div>
 
-<body style="--bs-body-color: #333;">
-    <div class="container w-50">
-    <h1 class="p-2 text-center bg-warning shadow-sm">Tambah Peserta</h1>
-    <form class="my-1 shadow-sm" action="" method="POST">
-        <table class="table fw-bold bg-info">
-            <tr>
-                <td>Id Peserta</td>
-                <td><input class="form-control" type="text" value="No. /PL43 P.01/ VII/2020" readonly></td>
-            </tr>
-            <tr>
-                <td>Nama</td>
-                <td><input class="form-control" type="text" name="nama" required></td>
-            </tr>
-            <tr>
-                <td>Jenis Kelamin</td>
-                <td>
-                    <input type="radio" class="form-check-input" name="jenis_kelamin" value="L" required><label> Laki-Laki</label>
-                    <input type="radio" class="form-check-input" name="jenis_kelamin" value="P" required><label> Perempuan</label>
-                </td>
-            </tr>            
-            <tr>
-                <td>Alamat</td>
-                <td><textarea class="form-control" name="alamat" rows="3" required></textarea></td>
-            </tr>
-            <tr>
-                <td>Tema</td>
-                <td><textarea class="form-control" name="tema" rows="3" required></textarea></td>
-            </tr>
-            <tr>
-                <td>Peran</td>
-                <td>
-                    <input type="radio" class="form-check-input" name="peran" value="Pemateri" required><label> Pemateri</label>
-                    <input type="radio" class="form-check-input" name="peran" value="Peserta" required><label> Peserta</label>
-                </td>
-            </tr>
-            <tr>
-                <td>Tanggal Kegiatan</td>
-                <td><input type="date" name="tgl_kegiatan" required></td>
-            </tr>
-            
-            <tr>
-                <td>Tanggal Sertfikat</td>
-                <td><input type="date" name="tgl_sertifikat" required></td>
-            </tr>
-        </table>
-        
-        <hr>
-        <input type="submit" class="button bg-info rounded shadow-sm" value="Simpan" name="simpan">
-        <a href="index.php"><input type="button" class="button rounded shadow-sm" value="Batal"></a>
-    </form>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 </html>
