@@ -26,6 +26,9 @@
           </div>
       </div>
       <div class="card">
+        <div class="card-header">
+            <a href="index.php" class="btn btn-primary btn-sm" style="float: right;" aria-disabled="true">Kembali</a>
+          </div>
         <div class="card-body">
            <?php foreach ( $peserta as $pst ) : ?>
            <table class="table table-striped">
