@@ -49,7 +49,7 @@
                 <div class="row mb-3">
             <label class="col-sm-2 col-form-label">ID Sertifikat</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control"  value="No. 0<?= $pst['id_peserta']; ?>/PL43 P.01/ VII/2020" readonly>
+              <input type="text" class="form-control"  value="<?= $pst['id_peserta']; ?>" readonly>
             </div>
           </div>
           <div class="row mb-3">
