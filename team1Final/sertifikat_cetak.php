@@ -15,7 +15,7 @@
 		<head>
 			<title>Cetak Sertifikat</title>
 		</head>
-		<body style="background-image: url("background.jpg");">';
+		<body background = "background.jpg">';
 				foreach ($peserta as $pst) :
 	   $html .= '<center>
 	   				<h3>KEMENTERIAN PENDIDIKAN DAN KEBUDAYAAN POLITEKNIK NEGERI CILACAP <br> PUSAT PENELITIAN DAN PENGABDIAN KEPADA MASYARAKAT</h3>
