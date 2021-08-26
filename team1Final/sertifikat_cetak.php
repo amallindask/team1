@@ -48,8 +48,8 @@
 			</div>
 			<main>';
 				foreach ($peserta as $pst) :
-	   $html .= '<center>
-	   				<h3>KEMENTERIAN PENDIDIKAN DAN KEBUDAYAAN POLITEKNIK NEGERI CILACAP <br> PUSAT PENELITIAN DAN PENGABDIAN KEPADA MASYARAKAT</h3>
+	   $html .= '<center><br><br>
+	   				<h2>KEMENTERIAN PENDIDIKAN DAN KEBUDAYAAN POLITEKNIK NEGERI CILACAP <br> PUSAT PENELITIAN DAN PENGABDIAN KEPADA MASYARAKAT</h2>
 	   			</center><br>
 	   			<center>
 	   				<strong>SERTIFIKAT</strong><br>
@@ -62,12 +62,12 @@
 	   			
 	   		<table>
 	   			<tr>
-	   				<td>Ganjar Ndaru Ikhtiagung, S.E., M.M. <br>
+	   				<td>Dr. Ir. Aris Tjahyanto M.Kom<br>
 	   				<hr>NIP.</td>
 	   				<td></td>
 	   				<td></td>
 	   				<td></td>
-	   				<td>Dr. Ir. Aris Tjahyanto M.Kom <br>
+	   				<td>Ganjar Ndaru Ikhtiagung, S.E., M.M. <br>
 	   				<hr>NIP.</td>
 	   			</tr>
 	   			';
