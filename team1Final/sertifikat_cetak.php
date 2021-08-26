@@ -26,7 +26,7 @@
 	   				No.0'.$pst["id_peserta"].'/PL43 P.01/ VII/2020<br><br>
 	   				Diberikan Kepada <br>'.$pst["nama"].'
 	   			</center><br><br><br>
-	   			Atas peran serta sebagai <strong>'.$pst["peran"].'</strong> dalam kegiatan Webinar dengan tema"'.$pst["tema"].'" yang diselenggarakan pada '.$pst["tgl_kegiatan"].', dalam kurun waktu 4 (empat) jam pertemuan yang diselengarakan oleh Pusat Penelitian dan Pengabdian Masyarakat (P3M) Politeknik Negeri Cilacap.<br><br>
+	   			Atas peran serta sebagai <strong>'.$pst["peran"].'</strong> dalam kegiatan Webinar dengan tema "'.$pst["tema"].'" yang diselenggarakan pada '.$pst["tgl_kegiatan"].', dalam kurun waktu 4 (empat) jam pertemuan yang diselengarakan oleh Pusat Penelitian dan Pengabdian Masyarakat (P3M) Politeknik Negeri Cilacap.<br><br>
 	   			<center>'.$pst["tgl_sertifikat"].'</center>';
 	   			}
 	$html .='</table>
