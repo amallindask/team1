@@ -19,7 +19,7 @@
 		<center></center>';
 				foreach ($peserta as $pst) {
 	   $html .= '<center>
-	   				<h5>KEMENTERIAN PENDIDIKAN DAN KEBUDAYAAN POLITEKNIK NEGERI CILACAP PUSAT PENELITIAN DAN PENGABDIAN KEPADA MASYARAKAT</h5>
+	   				<h3>KEMENTERIAN PENDIDIKAN DAN KEBUDAYAAN POLITEKNIK NEGERI CILACAP <br> PUSAT PENELITIAN DAN PENGABDIAN KEPADA MASYARAKAT</h3>
 	   			</center><br>
 	   			<center>
 	   				<strong>SERTIFIKAT</strong><br>
