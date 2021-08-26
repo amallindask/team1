@@ -1,21 +1,25 @@
 <?php 
     // Menghubungkan ke database
-require 'koneksi.php';
+      require 'koneksi.php';
 
     // Menambah peserta
-if( isset($_POST["simpan"]) ) {
-    if (peserta_tambah($_POST) > 0) {
-        echo "<script>
-        alert('BERHASIL');
-        document.location.href = 'index.php';
-        </script>";
-    } else{
-        echo "<script>
-        alert('GAGAL');
-        document.location.href = 'peserta_tambah.php';
-        </script>";
-    }
-}
+      if( isset($_POST["simpan"]) ) {
+          if (peserta_tambah($_POST) > 0) {
+              echo "<script>
+              alert('BERHASIL');
+              document.location.href = 'index.php';
+              </script>";
+          } else{
+              echo "<script>
+              alert('GAGAL');
+              document.location.href = 'peserta_tambah.php';
+              </script>";
+          }
+      }
+
+  $peserta       = mysqli_query($conn, "SELECT * FROM peserta");
+  $jml_peserta   = mysqli_num_rows($peserta);
+  $id_sertifikat = $jml_peserta + 1;
 ?>
 
 <!doctype html>
@@ -43,63 +47,63 @@ if( isset($_POST["simpan"]) ) {
                 <div class="row mb-3">
             <label class="col-sm-2 col-form-label">ID Sertifikat</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" value="No. /PL43 P.01/ VII/2020" readonly>
+              <input type="text" class="form-control" value="No. <?= $id_sertifikat ?>/PL43 P.01/ VII/2020" readonly>
             </div>
           </div>
           <div class="row mb-3">
-            <label class="col-sm-2 col-form-label">Nama</label>
+            <label class="col-sm-2 col-form-label" for="nama">Nama</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" name="nama" required="required">
+              <input type="text" class="form-control" id="nama" name="nama" required="required">
             </div>
           </div>
           <fieldset class="row mb-3">
             <legend class="col-form-label col-sm-2 pt-0">Jenis Kelamin</legend>
             <div class="col-sm-10">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="jenis_kelamin" value="L">
-                    <label class="form-check-label" for="gridRadios1">Laki-laki</label>
+                    <label class="form-check-label" for="Laki">Laki-laki</label>
+                    <input class="form-check-input" type="radio" id="Laki" name="jenis_kelamin" value="L">                    
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="jenis_kelamin" value="P">
-                    <label class="form-check-label" for="gridRadios2">Perempuan</label>
+                <div class="form-check">                    
+                    <label class="form-check-label" for="Perempuan">Perempuan</label>
+                    <input class="form-check-input" type="radio" id="Perempuan" name="jenis_kelamin" value="P">
                 </div>
             </div>
           </fieldset>
           <div class="row mb-3">
-            <label class="col-sm-2 col-form-label">Alamat</label>
+            <label class="col-sm-2 col-form-label" for="alamat">Alamat</label>
             <div class="col-sm-10">
-              <textarea class="form-control" name="alamat" rows="3" required="required"></textarea>
+              <textarea class="form-control" id="alamat" name="alamat" required></textarea>
             </div>
           </div>
            <div class="row mb-3">
-            <label class="col-sm-2 col-form-label">Tema Kegiatan</label>
+            <label class="col-sm-2 col-form-label" for="tema">Tema Kegiatan</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" name="tema" required="required">
+              <textarea class="form-control" id="tema" name="tema"></textarea>
             </div>
           </div>
           <fieldset class="row mb-3">
             <legend class="col-form-label col-sm-2 pt-0">Peran</legend>
             <div class="col-sm-10">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="peran" value="Pemateri">
-                    <label class="form-check-label" for="gridRadios1">Pemateri</label>
+                <div class="form-check">                    
+                    <label class="form-check-label" for="Pemateri">Pemateri</label>
+                    <input class="form-check-input" type="radio" id="Pemateri" name="peran" value="Pemateri">
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="peran" value="Peserta">
-                    <label class="form-check-label" for="gridRadios2">Peserta</label>
+                <div class="form-check">                    
+                    <label class="form-check-label" for="Peserta">Peserta</label>
+                    <input class="form-check-input" type="radio" id="Peserta" name="peran" value="Peserta">
                 </div>
             </div>
           </fieldset>
           <div class="row mb-3">
-            <label class="col-sm-2 col-form-label">Tanggal Kegiatan</label>
+            <label class="col-sm-2 col-form-label" for="tgl_kegiatan">Tanggal Kegiatan</label>
             <div class="col-sm-4">
-              <input type="date" class="form-control" name="tgl_kegiatan" required="required">
+              <input type="date" class="form-control" id="tgl_kegiatan" name="tgl_kegiatan" required="required">
             </div>
           </div>
           <div class="row mb-3">
-            <label class="col-sm-2 col-form-label">Tanggal Sertifikat</label>
+            <label class="col-sm-2 col-form-label" for="tgl_sertifikat">Tanggal Sertifikat</label>
             <div class="col-sm-4">
-              <input type="date" class="form-control" name="tgl_sertifikat" required="required">
+              <input type="date" class="form-control" id="tgl_sertifikat" name="tgl_sertifikat" required="required">
             </div>
           </div>
           <br>
