@@ -72,6 +72,13 @@
                 </td>
             </tr>
             <tr>
+                <td>Tema Kegiatan</td>
+                <td>:</td>
+                <td>
+                  <label><?= $pst['tema']; ?></label>
+                </td>
+            </tr>
+            <tr>
                 <td>Peran</td>
                 <td>:</td>
                 <td>
